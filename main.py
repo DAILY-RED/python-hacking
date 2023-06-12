@@ -6,7 +6,7 @@ if __name__ == "__main__":
     print(mac)
 
     # The new MAC address that it will get. 
-    curr_mac = mc.change_mac("eth0", "00:11:99:33:44:55")
+    curr_mac = mc.change_mac("eth0", "00:11:22:33:44:55")
     print(curr_mac)
 
 

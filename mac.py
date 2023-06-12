@@ -11,7 +11,7 @@ class MAC_Changer:
     
     def get_MAC(self, iface):
         # Get the ifconfig output 
-        output = subprocess.run(["ipconfig", iface], shell=False, capture_output=True)
+        output = subprocess.run(["ifconfig", iface], shell=False, capture_output=True)
 
         # Print the output
         cmd_result = output.stdout.decode('utf-8')
@@ -35,15 +35,15 @@ class MAC_Changer:
         print ("[+] Current MAC address is ", self.get_MAC(iface))
  
         # Shut down eth0 network interface
-        output = subprocess.run(["ipconfig", iface, "down"], shell= False, capture_output=True)
+        output = subprocess.run(["ifconfig", iface, "down"], shell= False, capture_output=True)
         print(output.stderr.decode('utf-8'))
 
         # Change the MAC address 
-        output = subprocess.run(["ipconfig", iface, "hw", "ether", new_mac], shell= False, capture_output=True)
+        output = subprocess.run(["ifconfig", iface, "hw", "ether", new_mac], shell= False, capture_output=True)
         print(output.stderr.decode('utf-8'))
 
         # Set start eth0 again
-        output = subprocess.run(["ipconfig", iface, "up", "ether", new_mac], shell= False, capture_output=True)
+        output = subprocess.run(["ifconfig", iface, "up", "ether", new_mac], shell= False, capture_output=True)
         print(output.stderr.decode('utf-8'))
 
         print("[+] Updated MAC address is ", self.get_MAC(iface))
