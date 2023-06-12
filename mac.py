@@ -25,5 +25,8 @@ class MAC_changer:
 
         # to search for string 
         ans = regex.search(cmd_result)
-        
-        print (ans)
+
+        # To extract "ether 00:11:22:33:44:55"
+        current_mac = ans.group().split(" ")[1]
+        self.MAC = current_mac
+        return current_mac
