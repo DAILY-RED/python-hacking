@@ -30,3 +30,22 @@ class MAC_changer:
         current_mac = ans.group().split(" ")[1]
         self.MAC = current_mac
         return current_mac
+    
+    def change_mac(self, iface, new_mac):
+        print ("[+] Current MAC address is ", self.get_MAC(iface))
+ 
+        # Shut down eth0 network interface
+        output = subprocess.run(["ifconfig", iface, "down"], shell= False, capture_output=True)
+        print(output.stderr.decode('utf-8'))
+
+        # Change the MAC address 
+        output = subprocess.run(["ifconfig", iface, "hw", "ether", new_mac], shell= False, capture_output=True)
+        print(output.stderr.decode('utf-8'))
+
+        # Set start eth0 again
+        output = subprocess.run(["ifconfig", iface, "up", "ether", new_mac], shell= False, capture_output=True)
+        print(output.stderr.decode('utf-8'))
+
+        print("[+] Updated MAC address is ", self.get_MAC(iface))
+        return self.get_MAC(iface)
+
