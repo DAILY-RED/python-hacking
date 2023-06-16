@@ -1,4 +1,5 @@
-from scapy.all import IP, ICMP, sr1
+from scapy.all import sr1
+from scapy.layers.inet import ICMP, IP
 
 # IP of my pc and the dest IP
 ip_layer = IP(scr="192.168.178.129", dst="www.google.com")
