@@ -12,7 +12,7 @@ if __name__ == "__main__":
     sock.listen(1)           # listening to 1 conncetion 
 
     print("[+] Waiting for incoming connections: ", SERVER_PORT)
-    client_sock, client_add = socket.accept()  # wait until the client connect
+    client_sock, client_add = sock.accept()  # wait until the client connect
     print ("[+] Connection established: ", client_add)
 
     msg = "This is the server speaking"
