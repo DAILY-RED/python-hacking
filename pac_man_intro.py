@@ -1,4 +1,4 @@
-from scapy.all import sr1
+from scapy.all import sr1, ls
 from scapy.layers.inet import ICMP, IP
 
 # IP of my pc and the dest IP
