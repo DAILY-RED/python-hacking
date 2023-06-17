@@ -1,4 +1,4 @@
-from scapy.all import srp, conf, ARP
+from scapy.all import srp, conf
 from scapy.layers.inet import Ether
 from scapy.layers.l2 import ARP
 import sys
