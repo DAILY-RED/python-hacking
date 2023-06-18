@@ -69,6 +69,7 @@ if __name__ == "__main__":
     main()
 
 
+#$ sudo lsof -i :8085
 
 
 # import socket
