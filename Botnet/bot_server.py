@@ -10,7 +10,7 @@
 #     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 #     sock.bind(("", port))
 #     sock.listen()
-#     bot, bot_address = socket.accept()
+#     bot, bot_address = sock.accept()
 #     clients.append(bot)
 
 # def main():
