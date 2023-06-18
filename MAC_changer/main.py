@@ -1,4 +1,4 @@
-from mac import MAC_Changer
+from MAC_changer.mac import MAC_Changer
 
 if __name__ == "__main__":
     mc = MAC_Changer()
