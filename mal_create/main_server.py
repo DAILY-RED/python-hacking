@@ -1,4 +1,4 @@
-from malware_create.server_connection import ServerConnection
+from mal_create.server_connection import ServerConnection
 
 if __name__ == "__main__":
 

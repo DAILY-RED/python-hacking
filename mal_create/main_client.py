@@ -1,4 +1,4 @@
-from  malware_create.client_connection import ClientConnection
+from  mal_create.client_connection import ClientConnection
 
 if __name__ == "__main__":
     my_socket = ClientConnection()
