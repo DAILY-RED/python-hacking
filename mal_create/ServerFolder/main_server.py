@@ -10,8 +10,7 @@ if __name__ == "__main__":
 
     my_conn, _ = my_socket.AcceptConnection()
 
-    my_socket.send_data("Hi this is server")
-
+    #my_socket.send_data("Hi this is server")
     #print(my_socket.receive_data())
 
     my_conn.close()
