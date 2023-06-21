@@ -1,4 +1,4 @@
-# from command import execute_command
+from commandC import execute_command
 # from download import download_file
 # from send2hacker import upload_file_folders
 # from screenshot import capture_screenshot
@@ -17,10 +17,10 @@ def handleConnection(my_socket):
 
         print("[+] USer input: ", user_input)
 
-        # if user_input == "1":
-        #     print("[+] Running system commands")
-        #     # develop function that will run commands
-        #     execute_command(my_socket)
+        if user_input == "1":
+            print("[+] Running system commands")
+            # develop function that will run commands
+            #execute_command(my_socket)
 
         # elif user_input == "2":
         #     print("[+] Donwnloading file")
@@ -39,8 +39,8 @@ def handleConnection(my_socket):
         # elif user_input == "6":
         #     become_persistant(my_socket)
 
-        if user_input == "99":
+        elif user_input == "99":
             break
-        # else :
-        #     time.sleep(30)
-        #     print("[+] Invalid user input ")
+        else :
+            #time.sleep(30)
+            print("[+] Invalid user input ")
