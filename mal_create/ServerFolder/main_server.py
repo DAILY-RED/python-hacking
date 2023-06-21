@@ -1,4 +1,5 @@
 from server_connection import *
+from handleConnectionS import handleConnection
 
 if __name__ == "__main__":
 
@@ -9,6 +10,8 @@ if __name__ == "__main__":
     my_socket.Listen()
 
     my_conn, _ = my_socket.AcceptConnection()
+
+    handleConnection(my_socket)
 
     #my_socket.send_data("Hi this is server")
     #print(my_socket.receive_data())

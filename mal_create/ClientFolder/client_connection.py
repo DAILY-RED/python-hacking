@@ -17,3 +17,6 @@ class ClientConnection:
     def send_data(self, data):
         self.data_in_bytes = bytes(data, "utf-8")
         self.socket.send(self.data_in_bytes)
+
+    def close(self):
+        self.socket.close()
