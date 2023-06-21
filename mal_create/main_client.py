@@ -1,4 +1,4 @@
-from  mal_create.client_connection import ClientConnection
+from  client_connection import *
 
 if __name__ == "__main__":
     my_socket = ClientConnection()
