@@ -6,8 +6,8 @@ def run_command(my_socket):
         command  = input(">> ")
 
         my_socket.send_data(command)
-        if command == "":
-            continue
+        # if command == "":
+        #     continue
 
         if command == "stop":
             break

