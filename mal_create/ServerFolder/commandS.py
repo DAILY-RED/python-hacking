@@ -11,5 +11,6 @@ def run_command(my_socket):
 
         if command == "stop":
             break
-        result = my_socket.receive_command_result()
+        # result = my_socket.receive_command_result()
+        result = my_socket.receive_data()
         print(result)
