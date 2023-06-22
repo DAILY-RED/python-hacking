@@ -8,7 +8,6 @@ def run_command(my_socket):
         my_socket.send_data(command)
         # if command == "":
         #     continue
-
         if command == "stop":
             break
         # result = my_socket.receive_command_result()
