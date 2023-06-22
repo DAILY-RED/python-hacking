@@ -1,4 +1,4 @@
-from server_connection import *
+from server_connection import ServerConnection
 from handleConnectionS import handleConnection
 
 if __name__ == "__main__":

@@ -48,7 +48,7 @@ def handleConnection(my_socket):
         # elif user_input == "6":
         #     become_persistant(my_socket)
 
-        if user_input == "99":
+        elif user_input == "99":
             break
         else:
             print("[+] Invalid input ")

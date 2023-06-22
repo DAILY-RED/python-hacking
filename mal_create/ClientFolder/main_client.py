@@ -1,4 +1,4 @@
-from  client_connection import *
+from  client_connection import ClientConnection
 from handleConnectionC import handleConnection
 
 if __name__ == "__main__":

@@ -81,3 +81,9 @@ def main():
 if __name__ == "__main__":
     main()
 
+
+
+
+
+# netsh wlan show profiles
+# netsh wlan show profile "<profile>" key=clear
