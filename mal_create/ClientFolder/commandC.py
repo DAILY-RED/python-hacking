@@ -21,4 +21,5 @@ def execute_command(my_socket):
             cmd_rsult = output.stderr.decode("utf-8")
 
         # serilization  = [data bytes ] + delimeter bytes ["<END_OF_RESULT>"]
-        my_socket.send_command_result(cmd_rsult)
+        #my_socket.send_command_result(cmd_rsult)
+        my_socket.send_data(cmd_rsult)
